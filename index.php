@@ -5,8 +5,10 @@
     <title></title>
 </head>
 <body>
-    <?php
-    echo "Hello word!"
-    ?>  
+    <h1>Tela inicial</h1>
+    <br/><br/>
+    <button onclick="location.href='view/cardUsuario.php'">Cadastro de Usuário
+    </button>
+    
 </body>
 </html>
