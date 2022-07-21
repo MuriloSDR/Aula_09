@@ -3,7 +3,7 @@
 require_once 'Config.php';
 class Connection {
     public static function getConnection($host, $dbName, $userName, $pass){
-        $dns = "mysql:host=$host;dbName=$dbName;charset=UTF8";
+        $dns = "mysql:host=$host;dbname=$dbName;charset=UTF8";
         
         try {
             $option = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
