@@ -2,19 +2,18 @@
 class CUsuario {
 
     public function inserir(){
-        if(isset($_POST['salvar'])){
-            var_dump($_POST);
+        if(isset($_POST['Salvar'])){
             $nome = $_POST['nome'];
             $usuario = $_POST['usuario'];
             $senha = $_POST['senha'];
 
             $pdo = require_once '../pdo/Connection.php';
-            $sql = "insert into usuario values (null,?,?,?)";
+            $sql = "insert into crudpessoa.usuario values (null,?,?,?)";
             $sth = $pdo->prepare($sql);
-            $sth ->bindparam(1, $nome, PDO::PARAM_STR);
-            $sth ->bindparam(2, $usuario, PDO::PARAM_STR);
-            $sth ->bindparam(3, $senhaEc, PDO::PARAM_STR);
-            $senhaEc = password_hash ($senha, PASSWORD_DEFAULT);
+            $sth->bindParam(1, $nome, PDO::PARAM_STR);
+            $sth->bindParam(2, $usuario, PDO::PARAM_STR);
+            $sth->bindParam(3, $senhaEc, PDO::PARAM_STR);
+            $senhaEc = password_hash($senha, PASSWORD_DEFAULT);
             $sth->execute();
             unset($sth);
             unset($pdo);

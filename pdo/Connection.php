@@ -15,4 +15,3 @@ class Connection {
     }
 }
 return Connection::getConnection($host, $dbName, $user, $pass);
-?>
