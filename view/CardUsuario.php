@@ -18,7 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     <body>
         <h1>Cadastro de Usuário</h1>
         <form action="<?php $CardUsuario->inserir(); ?>" method="POST">
-            <input type="text" name="nome" placeholder="Nome aqui...">
+        <input type="text" name="nome" placeholder="Digite seu nome" >
             <br/><br/>
             <select name="perfilAcesso">
                 <option value="">Selecione...</option>

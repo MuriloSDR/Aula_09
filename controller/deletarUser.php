@@ -11,3 +11,4 @@ if (isset($_POST['deletar'])) {
     unset($pdo);
     header("location: ../view/listaUsuarios.php");
     }
+?>

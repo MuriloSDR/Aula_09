@@ -26,13 +26,18 @@ $listaUsuarios = $CardUsuario->getUsuarios();
                     <tr>
                         <td><?php echo $user['idUsuario']; ?></td>
                         <td><?php echo $user['nomeUsuario']; ?></td>
-                        <td><?php echo $user['perfilAcesso']; ?></td>
                         <td><?php echo $user['usuario']; ?></td>
+                        <td><?php if($user['perfilAcesso'] == "admin"){
+                            echo "Administrador";}
+                            elseif($user['perfilAcesso'] == "use"){
+                                echo "Usuario";
+                             } ?>
+                        </td>
                         <td> <form action="editarUser.php" method="post">
                         <input type="hidden" name="idUsuario" 
                                     value="<?php echo $user['idUsuario']; ?>">
                         <input type="submit" value="Editar" name="editar">
-                        </form>|
+                        </form>
 
                             <form action="../controller/deletarUser.php" method="POST">
                                 <input type="hidden" name="idUsuario" value="<?php echo $user['idUsuario']; ?>">
